@@ -1,15 +1,36 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>To-Do List</title>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <section class="container">
-            <div class="heading">
+</head>
+
+<body>
+    <section class="container">
+        <div class="heading">
+            <!-- Title Heading for To-Do List -->
             <h1 class="heading__title">My To-Do List</h1>
+        </div>
+        <!-- Form for To-Do List -->
+        <form class="form" autocomplete="off">
+            <div>
+                <label class="form__label" for="todo">Today, I need to...</label>
+                <input class="form__input" type="text" id="todo" placeholder="Type in your list item" name="to-do"
+                    size="50" required>
+                <button class="button"><span>Add</span></button>
             </div>
-        </section>
-    </body>
+            <ul class="toDoList"></ul>
+            <button type="button" class="button button--clear"><span>Clear List</span></button>
+        </form>
+
+        <div>
+            <ul class="toDoList">
+            </ul>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
 </html>
